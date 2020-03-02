@@ -4,10 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/stylesheets/main.css" />
-  <title><%= title %></title>
+  <title>barTender</title>
 </head>
 <body>
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>    
+  <nav>
+    <a href="/recipes/new" <%- title === 'Add Recipe' ? 'class="active"' : '' %>>ADD RECIPE</a>
+    <a href="/cocktails/new" <%- title === 'Add Cocktail' ? 'class="active"' : '' %>>ADD COCKTAIL</a>
+    <a href="/cocktails" <%- title === 'All Cocktails' ? 'class="active"' : '' %>>ALL COCKTAILS</a>
+  </nav>
+  <ul class="right">
+    <li>
+    <% if (user) { %>
+      <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+    <% } else { %>
+      <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+    <% } %>
+    </li>
+  </ul>
+  <form action="/users" method="GET"></form>
 </body>
 </html>

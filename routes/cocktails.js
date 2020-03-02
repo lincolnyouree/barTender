@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const tktksCtrl = require("../controllers/tktks");
+const usersCtrl = require("../controllers/users");
 
-router.get("/", tktksCtrl.index);
+router.get("/", usersCtrl.index);
 router.post(isLoggedIn);
 
 function isLoggedIn(req, res, next) {

@@ -3,7 +3,10 @@ const router = require('express').Router();
 const passport = require('passport');
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Tktk Index' });
+  res.render('index', { 
+    title: 'Cocktail Index',
+    user: req.user
+  });
 });
 
 router.get('/auth/google', passport.authenticate(
