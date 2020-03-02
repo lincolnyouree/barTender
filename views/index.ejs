@@ -7,11 +7,6 @@
   <title>barTender</title>
 </head>
 <body>
-  <nav>
-    <a href="/recipes/new" <%- title === 'Add Recipe' ? 'class="active"' : '' %>>ADD RECIPE</a>
-    <a href="/cocktails/new" <%- title === 'Add Cocktail' ? 'class="active"' : '' %>>ADD COCKTAIL</a>
-    <a href="/cocktails" <%- title === 'All Cocktails' ? 'class="active"' : '' %>>ALL COCKTAILS</a>
-  </nav>
   <ul class="right">
     <li>
     <% if (user) { %>

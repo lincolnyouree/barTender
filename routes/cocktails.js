@@ -1,13 +1,9 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const usersCtrl = require("../controllers/users");
+const cocktailsCtrl = require('../controllers/cocktails');
 
-router.get("/", usersCtrl.index);
-router.post(isLoggedIn);
-
-function isLoggedIn(req, res, next) {
-    if ( req.isAuthenticated() ) return next();
-    res.redirect('/auth/google');
-  }
+router.get('/', cocktailsCtrl.index);
+router.get('/search', cocktailsCtrl.search);
+router.post('/search', cocktailsCtrl.apiCall);
 
 module.exports = router;

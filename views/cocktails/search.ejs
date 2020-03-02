@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />
+  <title>barTender</title>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
+    <a href="/cocktails" <%- title === 'All Cocktails' ? 'class="active"' : '' %>>All Cocktails</a>
+  </nav>
+  <h2>Cocktail Search</h2>
+  <% if (results === null) { %>
+    <form action="/cocktails/search/" method="POST">
+        <input type="text" name="query">
+        <button onclick="this.classList.toggle('yellow')" class="btn waves-effect waves-light" type="submit"></button>Search</button>
+    </form>
+  <% } else { %>
+    <h2>RESULTS!!!!</h2>
+    <% results.drinks.forEach(function(d, idx) { %>
+        <div>Name: <%= d.strDrink %></div>
+        <div>Glass: <%= d.strGlass %></div>
+        <img src="<%= d.strDrinkThumb %>" alt="drinkImg">
+        <div>Instructions: <%= d.strInstructions %></div>
+        <div>Ingredients:</div>
+        <div><%= d.strIngredient1 %></div>
+        <div><%= d.strIngredient2 %></div>
+        <div><%= d.strIngredient3 %></div>
+        <div><%= d.strIngredient4 %></div>
+        <div><%= d.strIngredient5 %></div>
+        <div><%= d.strIngredient6 %></div>
+        <div><%= d.strIngredient7 %></div>
+        <div><%= d.strIngredient8 %></div>
+        <div><%= d.strIngredient9 %></div>
+        <div><%= d.strIngredient10 %></div>
+    <% }) %>
+  <% } %> 
+</body>
+</html>

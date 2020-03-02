@@ -55,8 +55,16 @@
 
 ## Minimum Viable Product:
 
-* As a user, I should be able to... 
+* As a user, I should be able to sign into my barTender profile using authentication. 
+* As a user, I should be able to search for a cocktail by name.
+* As a user, I should be able to save a cocktail to a "Favorites" list.
+* As a user, I should be able to add notes to a saved cocktail.
+* As a user, I should be able to click a box to track whether or not I have tried a cocktail.
+* As a user, I should be able to delete a cocktail from my "Favorites" list. 
 
 ## Stretch Goals:
 
-* 
+* Allow user to swipe through random cocktails without having to search for something specific.
+* Allow user to customize all ingredients to create their perfect cocktail.
+* Ability to upload photo of user-made cocktail.
+* Mobile responsiveness. 
