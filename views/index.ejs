@@ -64,8 +64,15 @@
           <%= d.measure10 %>
           <br>
           <form action="/cocktails/<%= idx %>?_method=PUT" method="POST">
-            <input type="text"name="drinky" value="<%= drinky.drinky %>">
-            <input type="checkbox" name="tried" value="tried" <%= drinky.tried ? 'checked' : '' %>>
+            <input type="text"name="d" value="<%= d.drink %>">
+            <input type="checkbox" name="tried" value="tried" <%= d.tried ? 'checked' : '' %>>
+            
+            <div><%= d.drink %>
+              --
+              <a href="/cocktails/<%= idx %>">Edit Cocktail</a>
+              <%= d.tried ? 'Have Tried' : 'Have Not Tried' %>
+             </div><br>
+            
             <button type="submit">Update</button>
           </form>
           <br>
@@ -76,3 +83,5 @@
       <% } %>
 </body>
 </html>
+
+

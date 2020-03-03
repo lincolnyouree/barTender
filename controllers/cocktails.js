@@ -6,6 +6,7 @@ module.exports = {
     index,
     apiCall,
     addDrink,
+    update,
     deleteDrink
 }
 
@@ -42,6 +43,16 @@ function deleteDrink(req, res) {
     User.findById(req.user._id, function(err, user) {
         console.log(user.favoriteDrinks[req.params.id])
         user.favoriteDrinks.splice(req.params.id , 1)
+        user.save(function (err) {
+            res.redirect('/');
+        })
+    })
+  };
+
+  function update (req, res) {
+    User.findById(req.user._id, function(err, user) {
+        console.log(user.favoriteDrinks[req.params.id])
+        user.favoriteDrinks.update(req.params.id , req.body)
         user.save(function (err) {
             res.redirect('/');
         })
