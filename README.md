@@ -6,11 +6,11 @@
 
 ## Objective:
 
-* Create a browser-based game that simulates a simple slot machine.
+* Create a running database of my favorite cocktail recipes. 
 
 ## Motivation: 
 
-* A slot machine is one of the few games I technically know how to play, thus one of the only I considered building. The Beatles are the greatest band of all time... 
+* I love making cocktails and I love stories. I built this app to keep track of the cocktails I have made, the cocktails I would like to make, and the stories behind them. 
 
 ## Wireframe:
 
@@ -34,24 +34,25 @@
 
 ## Credits: 
 
-* Images: 
-* Font: 
-* Sounds: 
-* API: 
+* API: https://www.thecocktaildb.com/
 
 ## Pseudocode:
 
-* Search for cocktail recipe by entering name or ingredients into search bar.
-* Click button to save cocktail onto "Favorites" page.
-* Click button to delete cocktail from "Favorites" page.
-* Ability to add notes to cocktail.
-* Checkbox to keep track of whether you have had the cocktail.
+* Search for a cocktail by entering its name into a search bar.
+* Click a button to save a cocktail onto a "Favorites" page.
+* Click a button to delete a cocktail from a "Favorites" page.
+* Add notes to cocktail.
+* Check box to keep track of whether you have yet tried a cocktail.
 
 # User Experience:
 
 ## User Persona #1:
 
+* Betsy loves hosting her girlfriends for happy hour every Wednesday. She often experiments with new recipes and would love a way to keep track of what she has made and what her guests have liked.
+
 ## User Persona #2:
+
+* Michael wants to be able to quickly find a recipe for a classic drink after a long day of schoolwork. 
 
 ## Minimum Viable Product:
 
@@ -64,7 +65,7 @@
 
 ## Stretch Goals:
 
-* Allow user to swipe through random cocktails without having to search for something specific.
+* Swipe through random cocktails without having to search for a specific cocktail.
 * Allow user to customize all ingredients to create their perfect cocktail.
 * Ability to upload photo of user-made cocktail.
 * Mobile responsiveness. 

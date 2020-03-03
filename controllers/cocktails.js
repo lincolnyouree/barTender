@@ -5,7 +5,8 @@ const Cocktail = require('../models/cocktail');
 module.exports = {
     search,
     index,
-    apiCall
+    apiCall,
+    delete: deleteOne
 }
 function index(req, res) {
 
@@ -25,4 +26,9 @@ function apiCall(req, res) {
         .catch(error => {
             console.log(error);
         })
+}
+
+function deleteOne(req, res) {
+    Cocktail.deleteOne(req.params.id);
+    res.redirect('/');
 }
