@@ -1,19 +1,20 @@
 const axios = require('axios');
-const Cocktail = require('../models/cocktail');
-
+const User = require('../models/user');
 
 module.exports = {
     search,
     index,
     apiCall,
-    delete: deleteOne
+    addDrink,
+    deleteDrink
 }
-function index(req, res) {
 
-}
+function index(req, res) {
+};
+
 function search(req, res) {
     res.render('cocktails/search', {title: "Search Page", results: null});
-}
+};
 
 function apiCall(req, res) {
     let query = req.body.query;
@@ -26,9 +27,23 @@ function apiCall(req, res) {
         .catch(error => {
             console.log(error);
         })
-}
+};
 
-function deleteOne(req, res) {
-    Cocktail.deleteOne(req.params.id);
-    res.redirect('/');
-}
+function addDrink(req, res) {
+    User.findById(req.user._id, function(err, user) {
+        user.favoriteDrinks.push(req.body);
+        user.save(function(err) {
+            res.redirect('/');
+        })
+    })
+};
+
+function deleteDrink(req, res) {
+    User.findById(req.user._id, function(err, user) {
+        console.log(user.favoriteDrinks[req.params.id])
+        user.favoriteDrinks.splice(req.params.id , 1)
+        user.save(function (err) {
+            res.redirect('/');
+        })
+    })
+  };

@@ -8,45 +8,70 @@
 </head>
 <body>
   <nav>
-    <a href="/">Home</a>
+    <a href="/">Favorites</a>
     <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
-    <a href="/cocktails" <%- title === 'All Cocktails' ? 'class="active"' : '' %>>All Cocktails</a>
   </nav>
+  <h1>barTender</h1>
   <h2>Cocktail Search</h2>
   <% if (results === null) { %>
     <form action="/cocktails/search/" method="POST">
         <input type="text" name="query">
-        <button onclick="this.classList.toggle('yellow')" class="btn waves-effect waves-light" type="submit"></button>Search</button>
+        <button type="submit"></button>Search</button>
     </form>
   <% } else { %>
-    <h2>RESULTS!!!!</h2>
-    <% results.drinks.forEach(function(d, idx) { %>
+    <h2>Try one of these!</h2>
+    <% if (results.drinks === null) { %>
+        <div>No cocktails found!</div>
+    <% } else { %>
+       <% results.drinks.forEach(function(d, idx) { %> 
+        <form action="/cocktails/addDrink" method="POST">
         <div>Name: <%= d.strDrink %></div>
-        <img src="<%= d.strDrinkThumb %>" alt="drinkImg">
+        <input type="text" value="<%= d.strDrink %>" hidden name="drinkName">
+        <br>
+        <div><img src="<%= d.strDrinkThumb %>" alt="drinkImg"></div>
+        <input type="text" value="<%= d.strDrinkThumb %>" hidden name="image">
+        <br>
         <div>Instructions: <%= d.strInstructions %></div>
+        <input type="text" value="<%= d.strInstructions %>" hidden name="instructions">
+        <br>
         <div>Glass: <%= d.strGlass %></div>
+        <input type="text" value="<%= d.strGlass %>" hidden name="glass">
+        <br>
         <div>Ingredients:</div>
-        <div><%= d.strIngredient1 %></div>
-        <div><%= d.strMeasure1 %></div>
-        <div><%= d.strIngredient2 %></div>
-        <div><%= d.strMeasure2 %></div>
-        <div><%= d.strIngredient3 %></div>
-        <div><%= d.strMeasure3 %></div>
-        <div><%= d.strIngredient4 %></div>
-        <div><%= d.strMeasure4 %></div>
-        <div><%= d.strIngredient5 %></div>
-        <div><%= d.strMeasure5 %></div>
-        <div><%= d.strIngredient6 %></div>
-        <div><%= d.strMeasure6 %></div>
-        <div><%= d.strIngredient7 %></div>
-        <div><%= d.strMeasure7 %></div>
-        <div><%= d.strIngredient8 %></div>
-        <div><%= d.strMeasure8 %></div>
-        <div><%= d.strIngredient9 %></div>
-        <div><%= d.strMeasure9 %></div>
-        <div><%= d.strIngredient10 %></div>
-        <div><%= d.strMeasure10 %></div>
+        <div><%= d.strIngredient1 %> <%= d.strMeasure1 %></div>
+        <input type="text" value="<%= d.strIngredient1 %>" hidden name="ingredient1">
+        <input type="text" value="<%= d.strMeasure1 %>" hidden name="measure1">
+        <div><%= d.strIngredient2 %> <%= d.strMeasure2 %></div>
+        <input type="text" value="<%= d.strIngredient2 %>" hidden name="ingredient1">
+        <input type="text" value="<%= d.strMeasure2 %>" hidden name="measure1">
+        <div><%= d.strIngredient3 %> <%= d.strMeasure3 %></div>
+        <input type="text" value="<%= d.strIngredient3 %>" hidden name="ingredient3">
+        <input type="text" value="<%= d.strMeasure3 %>" hidden name="measure3">
+        <div><%= d.strIngredient4 %> <%= d.strMeasure4 %></div>
+        <input type="text" value="<%= d.strIngredient4 %>" hidden name="ingredient4">
+        <input type="text" value="<%= d.strMeasure4 %>" hidden name="measure4">
+        <div><%= d.strIngredient5 %> <%= d.strMeasure5 %></div>
+        <input type="text" value="<%= d.strIngredient5 %>" hidden name="ingredient5">
+        <input type="text" value="<%= d.strMeasure5 %>" hidden name="measure5">
+        <div><%= d.strIngredient6 %> <%= d.strMeasure6 %></div>
+        <input type="text" value="<%= d.strIngredient6 %>" hidden name="ingredient6">
+        <input type="text" value="<%= d.strMeasure6 %>" hidden name="measure6">
+        <div><%= d.strIngredient7 %> <%= d.strMeasure7 %></div>
+        <input type="text" value="<%= d.strIngredient7 %>" hidden name="ingredient7">
+        <input type="text" value="<%= d.strMeasure7 %>" hidden name="measure7">
+        <div><%= d.strIngredient8 %> <%= d.strMeasure8 %></div>
+        <input type="text" value="<%= d.strIngredient8 %>" hidden name="ingredient8">
+        <input type="text" value="<%= d.strMeasure8 %>" hidden name="measure8">
+        <div><%= d.strIngredient9 %> <%= d.strMeasure9 %></div>
+        <input type="text" value="<%= d.strIngredient9 %>" hidden name="ingredient9">
+        <input type="text" value="<%= d.strMeasure9 %>" hidden name="measure9">
+        <div><%= d.strIngredient10 %> <%= d.strMeasure10 %></div>
+        <input type="text" value="<%= d.strIngredient10 %>" hidden name="ingredient10">
+        <input type="text" value="<%= d.strMeasure10 %>" hidden name="measure10">
+        <br>
+        <button type="submit">Add To Favorites</button>
+        </form>
     <% }) %>
-  <% } %> 
+  <% }} %> 
 </body>
 </html>

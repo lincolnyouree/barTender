@@ -22,7 +22,7 @@
 
 ## Technology Implemented:
 
-* HTML
+* EJS
 * CSS
 * JavaScript
 * Node
@@ -42,30 +42,31 @@
 * Click a button to save a cocktail onto a "Favorites" page.
 * Click a button to delete a cocktail from a "Favorites" page.
 * Add notes to cocktail.
-* Check box to keep track of whether you have yet tried a cocktail.
+* Check box to keep track of whether you have tried a cocktail.
 
 # User Experience:
 
 ## User Persona #1:
 
-* Betsy loves hosting her girlfriends for happy hour every Wednesday. She often experiments with new recipes and would love a way to keep track of what she has made and what her guests have liked.
+* Betsy loves hosting her girlfriends for happy hour every Wednesday. She often experiments with new recipes and wants a way to keep track of the cocktails she has made, what her guests have liked, and keep notes for future revisions to those drinks.
 
 ## User Persona #2:
 
-* Michael wants to be able to quickly find a recipe for a classic drink after a long day of schoolwork. 
+* Michael likes to unwind after a long day of schoolwork. He wants to be able to quickly find a recipe for a classic drink.
 
 ## Minimum Viable Product:
 
 * As a user, I should be able to sign into my barTender profile using authentication. 
 * As a user, I should be able to search for a cocktail by name.
 * As a user, I should be able to save a cocktail to a "Favorites" list.
-* As a user, I should be able to add notes to a saved cocktail.
 * As a user, I should be able to click a box to track whether or not I have tried a cocktail.
 * As a user, I should be able to delete a cocktail from my "Favorites" list. 
 
 ## Stretch Goals:
 
-* Swipe through random cocktails without having to search for a specific cocktail.
-* Allow user to customize all ingredients to create their perfect cocktail.
+* Button for randomized cocktail search.
+* Search for cocktail by ingredient.
+* Ability to add notes to a saved cocktail.
+* Ability to customize ingredients and recipes to create desired cocktail.
 * Ability to upload photo of user-made cocktail.
 * Mobile responsiveness. 
