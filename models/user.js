@@ -1,5 +1,13 @@
 const mongoose = require("mongoose");
 
+
+const reviewSchema = new mongoose.Schema({
+  content: String,
+  rating: {type: Number, min: 1, max: 5, default: 5}
+}, {
+  timestamps: true
+});
+
 const cocktailSchema = new mongoose.Schema({
   drinkName: {
     type: String,
@@ -33,13 +41,17 @@ const cocktailSchema = new mongoose.Schema({
   measure9: {type: [String]},
   ingredient10: {type: [String]},
   measure10: {type: [String]},
+  reviews: [reviewSchema]
 });
+
+
 
 const userSchema = new mongoose.Schema({
    name: String,
    email: String,
    googleId: String,
-   favoriteDrinks: [cocktailSchema]
+   favoriteDrinks: [cocktailSchema],
+   
  }, {
    timestamps: true
 });
