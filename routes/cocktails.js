@@ -6,7 +6,6 @@ router.get('/', cocktailsCtrl.index);
 router.get('/search', cocktailsCtrl.search);
 router.post('/search', cocktailsCtrl.apiCall);
 router.post('/addDrink', cocktailsCtrl.addDrink);
-// router.put('/:id', cocktailsCtrl.update);
 router.delete('/:id', cocktailsCtrl.deleteDrink);
 router.get('/:id', cocktailsCtrl.show);
 

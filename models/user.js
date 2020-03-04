@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 const reviewSchema = new mongoose.Schema({
   content: String,
   rating: {type: Number, min: 1, max: 5, default: 5}
@@ -43,8 +42,6 @@ const cocktailSchema = new mongoose.Schema({
   measure10: {type: [String]},
   reviews: [reviewSchema]
 });
-
-
 
 const userSchema = new mongoose.Schema({
    name: String,
