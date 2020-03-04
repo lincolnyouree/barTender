@@ -25,16 +25,16 @@
     <% } else { %>
        <% results.drinks.forEach(function(d, idx) { %> 
         <form action="/cocktails/addDrink" method="POST">
-        <div>Name: <%= d.strDrink %></div>
+        <div> <%= d.strDrink %></div>
         <input type="text" value="<%= d.strDrink %>" hidden name="drinkName">
         <br>
         <div><img src="<%= d.strDrinkThumb %>" alt="drinkImg"></div>
         <input type="text" value="<%= d.strDrinkThumb %>" hidden name="image">
         <br>
-        <div>Instructions: <%= d.strInstructions %></div>
+        
         <input type="text" value="<%= d.strInstructions %>" hidden name="instructions">
         <br>
-        <div>Glass: <%= d.strGlass %></div>
+        
         <input type="text" value="<%= d.strGlass %>" hidden name="glass">
         <br>
         <div>Ingredients:</div>
@@ -71,7 +71,6 @@
         <br>
         <button type="submit">Add To Favorites</button>
         </form>
-        
     <% }) %>
   <% }} %> 
 </body>

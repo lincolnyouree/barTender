@@ -6,8 +6,9 @@ module.exports = {
     index,
     apiCall,
     addDrink,
-    update,
-    deleteDrink
+    // update,
+    deleteDrink,
+    show
 }
 
 function index(req, res) {
@@ -49,12 +50,22 @@ function deleteDrink(req, res) {
     })
   };
 
-  function update (req, res) {
+//   function update (req, res) {
+//     User.findById(req.user._id, function(err, user) {
+//         console.log(user.favoriteDrinks[req.params.id])
+//         user.favoriteDrinks.update(req.params.id , req.body)
+//         user.save(function (err) {
+//             res.redirect('/');
+//         })
+//     })
+//   };
+
+function show(req, res) {
     User.findById(req.user._id, function(err, user) {
         console.log(user.favoriteDrinks[req.params.id])
-        user.favoriteDrinks.update(req.params.id , req.body)
-        user.save(function (err) {
-            res.redirect('/');
-        })
+        let showDrink = user.favoriteDrinks.id(req.params.id)
+        
+            res.render('cocktails/show', {showDrink, title: 'Details'});
+        
     })
   };

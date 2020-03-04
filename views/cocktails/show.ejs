@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />
+  <title>barTender</title>
+</head>
+<body>
+  <nav>
+    <a href="/">Favorites</a>
+    <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
+  </nav>
+  <h1>barTender</h1>
+  <br><br>
+  <h2>Favorites</h2>
+  <br>
+  <div>
+    <%= showDrink.drinkName %>
+    <br>
+    <img src="<%= showDrink.image %>" alt="">
+    <br>
+    <div>Instructions: </div>
+    <%= showDrink.instructions %>
+    <br>
+    <div>Glass: </div>
+    <%= showDrink.glass %>
+    <br>
+    <div>Ingredients: </div>
+    <div> <%= showDrink.ingredient1 %><%= showDrink.measure1 %></div>
+    <div> <%= showDrink.ingredient2 %><%= showDrink.measure2 %></div>
+    <div> <%= showDrink.ingredient3 %><%= showDrink.measure3 %></div>
+    <div> <%= showDrink.ingredient4 %><%= showDrink.measure4 %></div>
+    <div> <%= showDrink.ingredient5 %><%= showDrink.measure5 %></div>
+    <div> <%= showDrink.ingredient6 %><%= showDrink.measure6 %></div>
+    <div> <%= showDrink.ingredient7 %><%= showDrink.measure7 %></div>
+    <div> <%= showDrink.ingredient8 %><%= showDrink.measure8 %></div>
+    <div> <%= showDrink.ingredient9 %><%= showDrink.measure9 %></div>
+    <div> <%= showDrink.ingredient10 %><%= showDrink.measure10 %></div>
+    <br>
+</body>
+</html>

@@ -25,63 +25,22 @@
       <% if (user) { %>
       <div>
         <% user.favoriteDrinks.forEach(function(d, idx) { %>
+          <br><br><br>
           <%= d.drinkName %>
-          <br>
+          <br><br><br>
           <img src="<%= d.image %>" alt="">
           <br>
-          <%= d.instructions %>
-          <br>
-          <%= d.glass %>
-          <br>
-          <%= d.ingredient1 %> 
-          <%= d.measure1 %>
-          <br>
-          <%= d.ingredient2 %> 
-          <%= d.measure2 %>
-          <br>
-          <%= d.ingredient3 %> 
-          <%= d.measure3 %>
-          <br>
-          <%= d.ingredient4 %> 
-          <%= d.measure4 %>
-          <br>
-          <%= d.ingredient5 %> 
-          <%= d.measure5 %>
-          <br>
-          <%= d.ingredient6 %> 
-          <%= d.measure6 %>
-          <br>
-          <%= d.ingredient7 %> 
-          <%= d.measure7 %>
-          <br>
-          <%= d.ingredient8 %> 
-          <%= d.measure8 %>
-          <br>
-          <%= d.ingredient9 %> 
-          <%= d.measure9 %>
-          <br>
-          <%= d.ingredient10 %> 
-          <%= d.measure10 %>
-          <br>
-          <form action="/cocktails/<%= idx %>?_method=PUT" method="POST">
-            <input type="text"name="d" value="<%= d.drink %>">
-            <input type="checkbox" name="tried" value="tried" <%= d.tried ? 'checked' : '' %>>
-            
-            <div><%= d.drink %>
-              --
-              <a href="/cocktails/<%= idx %>">Edit Cocktail</a>
-              <%= d.tried ? 'Have Tried' : 'Have Not Tried' %>
-             </div><br>
-            
-            <button type="submit">Update</button>
-          </form>
-          <br>
+          <label>Tried It:
+          </label>
+          <td><%= d.haveTried ? 'Yes' : 'No' %></td>   
+          <br><br>
+          <td><a href="/cocktails/<%= d._id %>">Details</a></td>
+          <br><br>
           <form action="/cocktails/<%= idx %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form>
+          <br><br><br>
         <% }) %>
       </div>
       </form>
       <% } %>
 </body>
 </html>
-
-
