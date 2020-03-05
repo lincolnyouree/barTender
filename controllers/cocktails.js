@@ -78,15 +78,3 @@ function update(req, res) {
         })
     })
 };
-
-       
-    // find user
-    //  get drink
-    //  get information from req.body whether the person has tried or not
-    //  (will probably need to console.log req.body to see shape and find out how to get above info)
-    // change drink.haveTried to info rom line 67
-    //  save user
-
-
-  
-  

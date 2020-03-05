@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const usersCtrl = require("../controllers/users");
+const passport = require('passport');
 
 router.get("/", usersCtrl.index);
 router.post(isLoggedIn);

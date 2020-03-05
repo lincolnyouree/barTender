@@ -1,5 +1,7 @@
 # barTender
 
+* Click [here](https://bartenderapp.herokuapp.com/) to view the barTender app!
+
 ## Trello:
 
 * Click [here](https://trello.com/b/C98h8T0U/bartender-project-2) to view the Trello board.
@@ -35,6 +37,7 @@
 ## Credits: 
 
 * API: https://www.thecocktaildb.com/
+* Images: https://www.freepik.com/ 
 
 ## Pseudocode:
 
