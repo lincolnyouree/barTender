@@ -38,6 +38,22 @@
     <div> <%= showDrink.ingredient9 %><%= showDrink.measure9 %></div>
     <div> <%= showDrink.ingredient10 %><%= showDrink.measure10 %></div>
     <br>
+
+
+
+
+
+    <form action="/cocktails/<%= showDrink._id %>?_method=PUT" method="POST">
+    <label>Tried It:
+      <input type="checkbox" name="haveTried">
+    </label><br>
+
+      <div><button type="submit" id="btn">Update</button></div>
+      </form>
+
+
+
+
     <h2>Reviews</h2>
     <form id="add-review-form" method="POST" action="/cocktails/<%= showDrink._id %>/reviews">
       <label>Review:</label>
@@ -80,5 +96,6 @@
 <% } else { %>
   <h5>No Reviews Yet</h5>
 <% } %>
+<script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>

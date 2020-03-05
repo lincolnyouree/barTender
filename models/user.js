@@ -8,6 +8,10 @@ const reviewSchema = new mongoose.Schema({
 });
 
 const cocktailSchema = new mongoose.Schema({
+  haveTried: {
+    type: Boolean,
+    default: false
+  }, 
   drinkName: {
     type: String,
   },

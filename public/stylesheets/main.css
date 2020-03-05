@@ -4,31 +4,31 @@
 
 body {
   font-family: sans-serif;
-  background-color: rgb(247, 244, 204);
+  background-color: white;
   
 }
 
 h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 100px;
+  font-size: 10vmin;
   text-align: right;
-  background-color: rgb(47, 0, 166);
-  color: rgb(247, 244, 204);
+  background-color: black;
+  color: white;
 }
 
 h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 50px;
+  font-size: 5vmin;
   text-align: center;
-  color: rgb(47, 0, 166);
+  color: black;
 }
 
 nav {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
+  font-size: 3vmin;
   text-align: left;
-  background-color: rgb(47, 0, 166);
-  color: rgb(247, 244, 204);
+  background-color: black;
+  color: white;
 }
 
 div {
@@ -37,12 +37,16 @@ div {
 }
 
 img {
-  border-radius: 100px;
-  height: 500px;
-  width: 500px;
+  filter: grayscale(50%);
+  border-radius: 100vmin;
+  height: 60vmin;
+  width: 60vmin;
 }
 
 a {
   color: red;
 }
 
+#btn {
+  align-items: center;
+}

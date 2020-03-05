@@ -7,7 +7,8 @@ module.exports = {
     apiCall,
     addDrink,
     deleteDrink,
-    show
+    show,
+    update
 }
 
 function index(req, res) {
@@ -59,3 +60,33 @@ function show(req, res) {
         res.render('cocktails/show', {showDrink, title: 'Details'});
     })
   };
+
+function update(req, res) {
+    console.log(req.body);
+    User.findById(req.user._id, function(err, user) {
+        let drink = user.favoriteDrinks.id(req.params.id)
+        if (req.body.haveTried === 'on') {
+            drink.haveTried = true;
+        }
+
+
+        console.log(user);
+    
+        user.save(function (err) {
+            if (err) console.log(err);
+            res.redirect('/');
+        })
+    })
+};
+
+       
+    // find user
+    //  get drink
+    //  get information from req.body whether the person has tried or not
+    //  (will probably need to console.log req.body to see shape and find out how to get above info)
+    // change drink.haveTried to info rom line 67
+    //  save user
+
+
+  
+  
