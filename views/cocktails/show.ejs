@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/main.css" />
   <title>barTender</title>
 </head>
@@ -10,53 +11,48 @@
   <nav>
     <a href="/">Favorites</a>
     <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
-  </nav>
+  </nav><br>
   <h1>barTender</h1>
   <br><br>
   <h2>Favorites</h2>
   <br>
-  <div>
+  <div class="showCard">
+  <div class="showDrink">
     <%= showDrink.drinkName %>
-    <br>
+  </div><br>
+    <div class="showImage">
     <img src="<%= showDrink.image %>" alt="">
+   </div>
     <br>
-    <div>Instructions: </div>
-    <%= showDrink.instructions %>
     <br>
-    <div>Glass: </div>
-    <%= showDrink.glass %>
-    <br>
-    <div>Ingredients: </div>
-    <div> <%= showDrink.ingredient1 %><%= showDrink.measure1 %></div>
-    <div> <%= showDrink.ingredient2 %><%= showDrink.measure2 %></div>
-    <div> <%= showDrink.ingredient3 %><%= showDrink.measure3 %></div>
-    <div> <%= showDrink.ingredient4 %><%= showDrink.measure4 %></div>
-    <div> <%= showDrink.ingredient5 %><%= showDrink.measure5 %></div>
-    <div> <%= showDrink.ingredient6 %><%= showDrink.measure6 %></div>
-    <div> <%= showDrink.ingredient7 %><%= showDrink.measure7 %></div>
-    <div> <%= showDrink.ingredient8 %><%= showDrink.measure8 %></div>
-    <div> <%= showDrink.ingredient9 %><%= showDrink.measure9 %></div>
-    <div> <%= showDrink.ingredient10 %><%= showDrink.measure10 %></div>
-    <br>
-
-
-
-
-
+    <div class="showGlass">Glass: 
+      <%= showDrink.glass %></div>
+      <br>
+      <div class="showIngredients">Ingredients: </div>
+      <div class="theIngredients">
+        <div> <%= showDrink.ingredient1 %><%= showDrink.measure1 %></div>
+        <div> <%= showDrink.ingredient2 %><%= showDrink.measure2 %></div>
+        <div> <%= showDrink.ingredient3 %><%= showDrink.measure3 %></div>
+        <div> <%= showDrink.ingredient4 %><%= showDrink.measure4 %></div>
+        <div> <%= showDrink.ingredient5 %><%= showDrink.measure5 %></div>
+        <div> <%= showDrink.ingredient6 %><%= showDrink.measure6 %></div>
+        <div> <%= showDrink.ingredient7 %><%= showDrink.measure7 %></div>
+        <div> <%= showDrink.ingredient8 %><%= showDrink.measure8 %></div>
+        <div> <%= showDrink.ingredient9 %><%= showDrink.measure9 %></div>
+        <div> <%= showDrink.ingredient10 %><%= showDrink.measure10 %></div></div>
+      </div><br>
+      <div class="showInstructions">Instructions: 
+      <%= showDrink.instructions %></div>
+      <div class="notes">
     <form action="/cocktails/<%= showDrink._id %>?_method=PUT" method="POST">
     <label>Tried It:
-      <input type="checkbox" name="haveTried">
-    </label><br>
-
+      <input type="checkbox" name="haveTried"></label><br>
       <div><button type="submit" id="btn">Update</button></div>
-      </form>
-
-
-
-
+      </form></div></div>
     <h2>Reviews</h2>
+    <div id="reviews">
     <form id="add-review-form" method="POST" action="/cocktails/<%= showDrink._id %>/reviews">
-      <label>Review:</label>
+      <center><label>Notes:</label>
       <textarea name="content"></textarea>
       <label>Rating:</label>
       <select name="rating">
@@ -94,8 +90,8 @@
     </tbody>
   </table>
 <% } else { %>
-  <h5>No Reviews Yet</h5>
+  <h5>No notes yet.</h5>
 <% } %>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+    </div></div></center>
 </body>
 </html>

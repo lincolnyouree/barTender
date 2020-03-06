@@ -16,11 +16,17 @@
 
 ## Wireframe:
 
-![Wireframe]()
+![Wireframe](https://i.imgur.com/bSKjha6.jpg)
 
 ## ERD:
 
 ![Wireframe](https://i.imgur.com/MkEGy9b.png)
+
+## Finished App:
+
+![Wireframe](https://i.imgur.com/aZQk3Sk.png)
+![Wireframe](https://i.imgur.com/JXlzfy3.png)
+![Wireframe](https://i.imgur.com/BSHbaXk.png)
 
 ## Technology Implemented:
 
