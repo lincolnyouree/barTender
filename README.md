@@ -30,12 +30,11 @@
 
 ## Technology Implemented:
 
-* EJS
+* HTML/EJS
 * CSS
 * JavaScript
-* Node
-* MongoDB
-* Mongoose
+* Node.js/Express
+* MongoDB/Mongoose
 * API
 * OAuth
 * Atlas
@@ -43,7 +42,6 @@
 ## Credits: 
 
 * API: https://www.thecocktaildb.com/
-* Images: https://www.freepik.com/ 
 
 ## Pseudocode:
 
@@ -75,7 +73,7 @@
 
 * Button for randomized cocktail search.
 * Search for cocktail by ingredient.
-* Ability to add notes to a saved cocktail.
+* ~Ability to add notes to a saved cocktail.~
 * Ability to customize ingredients and recipes to create desired cocktail.
 * Ability to upload photo of user-made cocktail.
 * Mobile responsiveness. 
