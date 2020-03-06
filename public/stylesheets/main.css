@@ -20,8 +20,6 @@ h1 {
   text-align: right;
   background-color: black;
   color:white;
-  /* font-weight: bold; */
-  /* color: black; */
 }
 
 h2 {
@@ -74,7 +72,6 @@ img {
   flex-direction: column;
   justify-content: center;
   font-family: 'Baloo Bhai 2';
-  /* height: 650px; */
   width: 500px;
   border-color: black;
   border-width: 3px;
@@ -188,4 +185,3 @@ img {
   width: 500px;
   margin: 0px 0px 0px 450px; 
 }
-
