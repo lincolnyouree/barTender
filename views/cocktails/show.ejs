@@ -16,7 +16,7 @@
   <br><br>
   <h2>Favorites</h2>
   <br>
-  <div class="showCard">
+  <section class="showCard">
   <div class="showDrink">
     <%= showDrink.drinkName %>
   </div><br>
@@ -25,10 +25,13 @@
    </div>
     <br>
     <br>
-    <div class="showGlass">Glass: 
-      <%= showDrink.glass %></div>
+    <div class="showGlass">
+      Glass: <%= showDrink.glass %>
+    </div>
       <br>
-      <div class="showIngredients">Ingredients: </div>
+      <div class="showIngredients">
+        Ingredients:
+      </div>
       <div class="theIngredients">
         <div> <%= showDrink.ingredient1 %><%= showDrink.measure1 %></div>
         <div> <%= showDrink.ingredient2 %><%= showDrink.measure2 %></div>
@@ -39,16 +42,17 @@
         <div> <%= showDrink.ingredient7 %><%= showDrink.measure7 %></div>
         <div> <%= showDrink.ingredient8 %><%= showDrink.measure8 %></div>
         <div> <%= showDrink.ingredient9 %><%= showDrink.measure9 %></div>
-        <div> <%= showDrink.ingredient10 %><%= showDrink.measure10 %></div></div>
-      </div><br>
+        <div> <%= showDrink.ingredient10 %><%= showDrink.measure10 %></div>
+      </div>
       <div class="showInstructions">Instructions: 
-      <%= showDrink.instructions %></div>
+        <%= showDrink.instructions %></div>
+      </section><br>
       <div class="notes">
     <form action="/cocktails/<%= showDrink._id %>?_method=PUT" method="POST">
     <label>Tried It:
       <input type="checkbox" name="haveTried"></label><br>
       <div><button type="submit" id="btn">Update</button></div>
-      </form></div></div>
+      </form></div>
     <h2>Reviews</h2>
     <div id="reviews">
     <form id="add-review-form" method="POST" action="/cocktails/<%= showDrink._id %>/reviews">
@@ -92,6 +96,6 @@
 <% } else { %>
   <h5>No notes yet.</h5>
 <% } %>
-    </div></div></center>
+    </div></center>
 </body>
 </html>

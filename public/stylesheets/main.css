@@ -20,7 +20,8 @@ h1 {
   text-align: right;
   background-color: black;
   color:white;
-  font-weight: bold;
+  /* font-weight: bold; */
+  /* color: black; */
 }
 
 h2 {
@@ -40,14 +41,6 @@ h3 {
 img {
   margin: 0px 0px 0px 0px;
   filter: grayscale(85%);
-  border-radius: 150px;
-  height: 250px;
-  width: 250px;
-}
-
-.img {
-  margin: 0px 0px 0px 130px;
-  filter: grayscale(50%);
   border-radius: 150px;
   height: 250px;
   width: 250px;
@@ -75,6 +68,19 @@ img {
   width: 500px;
   margin: 5px 5px 5px 450px; 
 }
+
+.favs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Baloo Bhai 2';
+  /* height: 650px; */
+  width: 500px;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  margin: 0px 0px 0px 450px; 
+} 
 
 .nameDrink {
   display: flex;
@@ -183,15 +189,3 @@ img {
   margin: 0px 0px 0px 450px; 
 }
 
-.favs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Baloo Bhai 2';
-  height: 750px;
-  width: 500px;
-  border-color: black;
-  border-width: 3px;
-  border-style: solid;
-  margin: 5px 5px 5px 450px; 
-} 

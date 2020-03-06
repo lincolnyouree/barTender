@@ -11,6 +11,10 @@
   <nav>
     <a href="/">Favorites</a>
     <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
+  </nav>
+  <form action="/users" method="GET"></form><br>
+  <h1>barTender</h1>
+  <h2>Favorites</h2>
   <ul class="right">
     <li>
       <% if (user) { %>
@@ -20,35 +24,27 @@
           <% } %>
         </li>
       </ul>
-    </nav>
-    <section class="details">
-    <section class="detailsDelete">
-      <form action="/users" method="GET"></form><br>
-      <h1>barTender</h1>
-      <% if (user) { %>
-        <% user.favoriteDrinks.forEach(function(d, idx) { %>
-          <div class="favs">
-          <br><br><br>
-          <div class="indexName">
+  <div class="favs">
+    <% if (user) { %>
+      <% user.favoriteDrinks.forEach(function(d, idx) { %>
+        <br><br><br>
+        <div class="indexName">
           <%= d.drinkName %></div>
           <br><br><br><div class="img">
-          <img src="<%= d.image %>" alt=""></div>
-          <br>
-          <section id="tried">
-          <label>Tried It:
-          </label>
-          <td><%= d.haveTried ? 'Yes' : 'No' %></td>   
-          <br><br>
-          </section>
-          <td><a href="/cocktails/<%= d._id %>">Details</a></td>
-          <br><br>
-          <form action="/cocktails/<%= idx %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form>
-          </section>
-          <br><br><br>
-        <% }) %>
-      </div>
-      </form>
-      <% } %>
-      </section>
+            <img src="<%= d.image %>" alt=""></div>
+            <br>
+            <div class="tried">
+              <label>Tried It:
+              </label>
+              <td><%= d.haveTried ? 'Yes' : 'No' %></td>   
+              <br><br>
+              </div>
+              <td><a href="/cocktails/<%= d._id %>">Details</a></td>
+              <br><br>
+              <form action="/cocktails/<%= idx %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form>
+              <br><br><br>
+              <% }) %>
+              <% } %>
+            </div>
 </body>
 </html>
