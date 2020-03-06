@@ -31,20 +31,15 @@
         <div class="indexName">
           <%= d.drinkName %></div>
           <br><br><br><div class="img">
-            <img src="<%= d.image %>" alt=""></div>
-            <br>
-            <div class="tried">
-              <label>Tried It:
-              </label>
-              <td><%= d.haveTried ? 'Yes' : 'No' %></td>   
-              <br><br>
-              </div>
-              <td><a href="/cocktails/<%= d._id %>">Details</a></td>
-              <br><br>
-              <form action="/cocktails/<%= idx %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form>
-              <br><br><br>
-              <% }) %>
-              <% } %>
-            </div>
+            <img src="<%= d.image %>" alt=""></div><br>
+        <div class="tried">
+            <label>Tried It:</label>
+            <td><%= d.haveTried ? 'Yes' : 'No' %></td><br><br>
+        </div>
+            <td><a href="/cocktails/<%= d._id %>">Details</a></td><br><br>
+              <form action="/cocktails/<%= idx %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form><br><br><br>
+      <% }) %>
+    <% } %>
+        </div>
 </body>
 </html>
