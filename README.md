@@ -2,7 +2,7 @@
 
 * barTender is a full-stack app for keeping a running database of cocktail recipes using Express and RESTful API.
 
-* Click [here](https://bartenderapp.herokuapp.com/) to view the barTender app!
+* Click [here](https://bartenderapp.herokuapp.com/) to view the app.
 
 * Click [here](https://trello.com/b/C98h8T0U/bartender-project-2) to view the Trello board.
 
@@ -20,7 +20,7 @@
 
 ## Credits: 
 
-* API: https://www.thecocktaildb.com/
+* API: thecocktaildb.com
 
 ## Screenshots:
 

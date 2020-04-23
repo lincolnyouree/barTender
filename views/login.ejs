@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/main.css" />
   <title>barTender</title>
 </head>
 <body>
+  <nav>
+    <a href="/">Favorites</a>
+    <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
+    <a href="/logout"><i></i>Log Out</a>
+    <h4>barTender</h4>
+    <a href="/">Login</a>
+  </nav><br>
     <h3>Oops! You'll need to go back and login!</h3>
-    <center><a href="/">Login</a></center>
 </body>
 </html>
