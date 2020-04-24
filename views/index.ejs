@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/main.css" />
   <title>barTender</title>
@@ -19,21 +18,22 @@
           <a href="/auth/google"><i></i>Login with Google</a>
           <% } %>
         <h4>barTender</h4>
-    </nav>
-  <div class="card">
-    <% if (user) { %>
+    </nav><br><br><br><br>
+  <h2>Favorites</h2>
+  <% if (user) { %>
+    <div class="favscard">
       <% user.favoriteDrinks.forEach(function(d, idx) { %>
-        <br><br><br>
+        
         <div class="nameDrink">
           <%= d.drinkName %></div>
           <br><br><br><div class="imageDrink">
-            <img src="<%= d.image %>" alt=""></div><br>
+            <img src="<%= d.image %>" alt=""></div>
         <div class="tried">
             <label>Tried It:</label>
-            <td><%= d.haveTried ? 'Yes' : 'No' %></td><br><br>
+            <td><%= d.haveTried ? 'Yes' : 'No' %></td>
         </div>
-            <td><a href="/cocktails/<%= d._id %>">Details</a></td><br><br>
-              <form action="/cocktails/<%= idx %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form><br><br><br>
+            <td><a href="/cocktails/<%= d._id %>" class="detailbtn">Details</a></td>
+              <form action="/cocktails/<%= idx %>?_method=DELETE" method="POST"><button type="submit" class="btn">Delete</button></form>
       <% }) %>
     <% } %>
         </div>

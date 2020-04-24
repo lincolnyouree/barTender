@@ -10,6 +10,10 @@ a {
   color: whitesmoke;
 }
 
+.detailbtn {
+    color: darkred;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -47,6 +51,7 @@ h4 {
   display: flex;
   flex-direction: column;
   text-align: right;
+  font-size: 5vmin;
 }
 
 .card {
@@ -56,19 +61,17 @@ h4 {
   font-family: 'Amatic SC', cursive; 
   height: 75vmin;
   width: 50vmin;
-  border-color: black;
-  border-width: 1vmin;
-  border-style: solid;
   margin: auto;
   padding: 20vmin; 
 } 
 
-
-
-
-
-
-
+.favscard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Amatic SC', cursive; 
+  margin: auto;
+} 
 
 .log {
   display: grid;
@@ -87,12 +90,6 @@ h4 {
   height: 65vmin;
   width: 50vmin;
 }
-
-
-
-
-
-
 
 h1 {
   font-family: 'Amatic SC', cursive; 
@@ -130,30 +127,6 @@ img {
   width: 45vmin;
 }
 
-
-
- .showCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Amatic SC', cursive; 
-  height: 65vmin;
-  width: 50vmin;
-  margin: auto; 
-}
-
-/* .favs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Amatic SC', cursive; 
-  width: 50vmin;
-  border-color: black;
-  border-width: 3vmin;
-  border-style: solid;
-  margin: auto; 
-}  */
-
 .nameDrink {
   display: flex;
   flex-direction: column;
@@ -166,70 +139,23 @@ img {
   color: black;
 }
 
-.showDrink {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Amatic SC', cursive; 
-  font-size: 50vmin;
-  padding: 10vmin;
-  font-weight: bold;
-  text-decoration: underline;
-  align-items: center;
-  color: darkred;
-}
-
-.indexName {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Amatic SC', cursive; 
-  font-size: 50vmin;
-  padding: 10vmin;
-  font-weight: bold;
-  text-decoration: underline;
-  color: darkred;
-}
-
-.ingredientName {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Amatic SC', cursive; 
-  padding: 1vmin;
-  font-weight: bold;
-  font-size: 5vmin;
-  text-decoration: underline;
-}
-
-.showIngredients {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Amatic SC', cursive; 
-  padding: 10vmin;
-  font-weight: bold;
-  text-decoration: underline;
-  color: darkred;
-}
-
 .theIngredients {
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Amatic SC', cursive; 
-  padding: 10vmin;
+  font-size: 4vmin;
+  text-align: center;
+  width: 50vmin;
+  padding: 2vmin;
   color: darkred;
 }
 
-.showInstructions {
+.drinkInstructions {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-family: 'Amatic SC', cursive; 
-  height: 50vmin;
-  width: 70vmin;
-  padding: 10vmin;
+  font-size: 3vmin;
 }
 
 .drinkIngredients {
@@ -245,8 +171,9 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   font-family: 'Amatic SC', cursive; 
-  height: 50vmin;
-  width: 50vmin;
+  font-size: 4vmin;
   margin: auto; 
+  padding: 10vmin;
 }

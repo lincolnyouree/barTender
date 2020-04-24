@@ -12,9 +12,14 @@
   <nav>
     <a href="/">Favorites</a>
     <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
-    <a href="/logout"><i></i>Log Out</a>
-    <h4>barTender</h4>
-  </nav><br><br><br><br>
+    <form action="/users" method="GET"></form><br>
+      <% if (user) { %>
+        <a href="/logout"><i></i>Log Out</a>
+        <% } else { %>
+          <a href="/auth/google"><i></i>Login with Google</a>
+          <% } %>
+        <h4>barTender</h4>
+    </nav><br><br><br><br>
     <h2>Cocktail Search</h2>
       <% if (results === null) { %>
         <div class="searchbar">

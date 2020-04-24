@@ -24,6 +24,7 @@
 
 ## Screenshots:
 
-![Wireframe](https://i.imgur.com/aZQk3Sk.png)
-![Wireframe](https://i.imgur.com/JXlzfy3.png)
-![Wireframe](https://i.imgur.com/BSHbaXk.png)
+![Wireframe](https://i.imgur.com/3zt1NjO.png)
+![Wireframe](https://i.imgur.com/eQFM7Bg.png)
+![Wireframe](https://i.imgur.com/JI5KSFz.png)
+![Wireframe](https://i.imgur.com/LaPFsSH.png)

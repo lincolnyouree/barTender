@@ -12,21 +12,26 @@
   <nav>
     <a href="/">Favorites</a>
     <a href="/cocktails/search" <%- title === 'Search Cocktails' ? 'class="active"' : '' %>>Search Cocktails</a>
-    <a href="/logout"><i></i>Log Out</a>
-    <h4>barTender</h4>
-  </nav><br>
+    <form action="/users" method="GET"></form><br>
+      <% if (user) { %>
+        <a href="/logout"><i></i>Log Out</a>
+        <% } else { %>
+          <a href="/auth/google"><i></i>Login with Google</a>
+          <% } %>
+        <h4>barTender</h4>
+    </nav><br>
     <h2>Favorites</h2><br>
-  <section class="showCard">
-    <div class="showDrink">
+  <div class="card">
+    <div class="nameDrink">
      <%= showDrink.drinkName %>
     </div><br>
-    <div class="showImage">
+    <div class="imageDrink">
       <img src="<%= showDrink.image %>" alt="">
     </div><br><br>
-    <div class="showGlass">
+    <div class="drinkGlass">
       Glass: <%= showDrink.glass %>
     </div><br>
-      <div class="showIngredients">
+      <div class="drinkIngredients">
         Ingredients:
       </div>
       <div class="theIngredients">
@@ -41,20 +46,20 @@
         <div> <%= showDrink.ingredient9 %><%= showDrink.measure9 %></div>
         <div> <%= showDrink.ingredient10 %><%= showDrink.measure10 %></div>
       </div>
-      <div class="showInstructions">Instructions: 
+      <div class="drinkInstructions">Instructions: 
         <%= showDrink.instructions %></div>
-  </section><br>
+      </div>
       <div class="notes">
-      <form action="/cocktails/<%= showDrink._id %>?_method=PUT" method="POST">
+      <form action="/cocktails/<%= showDrink._id %>?_method=PUT" method="POST"><br>
         <label>Tried It:
           <input type="checkbox" name="haveTried"></label><br>
-          <div><button type="submit" id="btn">Update</button></div>
+          <div><button type="submit" id="btn" class="btn">Update</button></div>
       </form></div>
       <h2>Reviews</h2>
-        <div id="reviews">
+        <div id="reviews" class="notes">
         <form id="add-review-form" method="POST" action="/cocktails/<%= showDrink._id %>/reviews">
-        <center><label>Notes:</label>
-        <textarea name="content"></textarea>
+        <label>Notes:</label><br>
+        <textarea name="content"></textarea><br>
         <label>Rating:</label>
         <select name="rating">
           <option value="1">1</option>
@@ -63,7 +68,7 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <input type="submit" value="Add Review">
+        <input type="submit" value="Add Review" class="btn">
       </form>
   <% if (showDrink.reviews.length) { %>
     <table>
@@ -93,6 +98,6 @@
   <% } else { %>
     <h5>No notes yet.</h5>
   <% } %>
-      </div></center>
+      </div>
 </body>
 </html>
